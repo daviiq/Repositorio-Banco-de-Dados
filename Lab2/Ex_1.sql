@@ -1,0 +1,20 @@
+DROP DATABASE IF EXISTS Lab2;
+CREATE DATABASE Lab2;
+USE Lab2;
+
+CREATE TABLE Cor (
+    idCor INT PRIMARY KEY AUTO_INCREMENT,
+    nomeCor VARCHAR(45) NOT NULL,
+    fabricante VARCHAR(45) NOT NULL;
+);
+
+CREATE TABLE Carro (
+    idCarro INT PRIMARY KEY AuTO_INCREMENT,
+    modelo VARCHAR(45) NOT NULL,
+    ano INT NOT NULL,
+    chassi VARCHAR(45) NOT NULL;
+    idCor INT NOT NULL,
+    Foreign Key (idCor) REFERENCES Cor(idCor)
+);
+
+

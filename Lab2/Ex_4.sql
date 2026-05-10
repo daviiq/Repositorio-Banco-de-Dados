@@ -1,0 +1,26 @@
+DROP DATABASE IF EXISTS Lab2;
+CREATE DATABASE Lab2;
+USE Lab2;
+
+CREATE TABLE Assunto(
+    idAssunto INT PRIMARY KEY AUTO_INCREMENT,
+    descricao VARCHAR(45) NOT NULL;
+);
+
+CREATE TABLE Senha (
+    idSenha INT PRIMARY KEY AUTO_INCREMENT,
+    dataHoraGerada DATETIME NOT NULL,
+    inicioAtendimento DATETIME NOT NULL,
+    fimAtendimento DATETIME NOT NULL,
+    numeroSenha INT NOT NULL;
+    descricao FOREIGN KEY (descricao) REFERENCES Assunto(descricao)
+);
+
+INSERT INTO Assunto
+(descricao)
+ VALUES
+('Pagamentos'),
+('Cadastro'),
+('Cancelamento'),
+('Suporte Técnico'),
+('Outros');
