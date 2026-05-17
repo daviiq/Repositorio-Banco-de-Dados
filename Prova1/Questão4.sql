@@ -17,6 +17,7 @@ CREATE TABLE Bolo (
     idConfeiteiro INT NOT NULL,
     FOREIGN KEY (idConfeiteiro)
         REFERENCES Confeiteiro(idConfeiteiro)
+        ON DELETE CASCADE
 );
 
 -- Inserindo confeiteiros
@@ -44,11 +45,8 @@ WHERE idConfeiteiro = 3;
 
 -- Exclui a Confeiteira Maria e os seus bolos --
 
-DELETE FROM Bolo
-WHERE idConfeiteiro = 2;
-
 DELETE FROM Confeiteiro 
-WHERE idConfeiteiro = 2;
+where idConfeiteiro = 2;
 
-select * FROM Confeiteiro;
-Select * from Bolo;
+SELECT * FROM Confeiteiro;
+SELECT * FROM Bolo;
